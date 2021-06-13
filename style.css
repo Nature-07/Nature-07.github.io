@@ -1,0 +1,79 @@
+.head_test {
+    margin:  0;             /* デフォルトCSS打ち消し */
+    position:  relative;    /* 位置調整 */
+    font-weight:  normal;   /* 文字の太さ調整 */
+    margin-bottom: 35px;    /* 周りの余白指定 */
+    font-size: 40px;        /* 文字サイズ指定 */
+    text-align:  center;    /* 文字位置指定 */
+}
+
+p {
+    margin:  0;             /* デフォルトCSS打ち消し */
+    line-height: 2;         /* 行間調整 */
+    text-align: center;
+}
+
+.head_test-point {
+    display:  block;        /* ブロック要素にする */
+    font-size:  14px;       /* 文字サイズ指定 */
+    margin-top:  10px;      /* 周りの余白指定 */
+    position:  relative;    /* 位置調整 */
+    width: 140px;           /* 幅指定 */
+    margin: 10px auto 0;    /* 周りの余白指定 */
+    background-color:  #fff;/* 背景色指定 */
+}
+ 
+.head_test-point:before {
+    content: '';            /* 空の要素を作る */
+    height:  1px;           /* 高さ指定 */
+    background-color:  #000;/* 背景色指定 */
+    position:  absolute;    /* 位置調整 */
+    top: 0;                 /* 位置調整 */
+    bottom:  0;             /* 位置調整 */
+    margin:  auto;          /* 位置調整 */
+    z-index: -1;            /* 重なり調整 */
+    width: 200px;           /* 幅指定 */
+    left:  -30px;           /* 位置調整 */
+}
+
+
+.box1{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #6a708b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+
+.box1 p {
+    margin: 0; 
+    padding: 0;
+}
+
+
+.box2 {
+    margin: 2em 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+}
+
+.box2 .box-title {
+    font-size: 1.2em;
+    background: #4c9ab9;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.box2 ul {
+    padding: 15px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.box2 li {
+    display: inline-block;
+}
