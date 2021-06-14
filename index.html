@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="with=device-width, initial-scale=1.0">
     <title>Negishi Keisukeの自己紹介</title>
     <!-- css -->
     <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
 </head>
-
 <body>
 
-    <div class="head_test-wrap">
-        <h1 class="head_test">
-            Negishi Keisuke<br>の自己紹介
-            <span class="head_test-point">Self Introduction</span>
-        </h1>
-    </div>
-    
-    <div class="box1">
-        <p>はじめまして！Negishi Keisukeといいます！<br>Swiftが好きです。皆さん宜しくお願いします。</p>
-    </div>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="./logo.png" class="logo-image"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">HOME</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
 
-    <div class="box2">
-        <div class="box-title">基本情報</div>
-        <div>
-            <ul class="basic_information">
-                <li>名前：</li>
-                <li>所属：</li>
-                <li>好きなもの：</li>
-            </ul>
+        <div class="text-box">
+            <h1>Negishi Keisukeの自己紹介</h1>
+            <p>はじめまして！Negishi Keisukeといいます！<br>Swiftが好きです。皆さん宜しくお願いします。</p>
+            <a href="" class="btn">Negishi Keisukeについてさらに詳しく</a>
         </div>
-    </div>
+    </section>
+
+    <section class="experience">
+        <h1>開発経験</h1>
+        <p>Swiftのみでしたが、最近HTML,CSS,Python,PHP,Goなどもはじめてみました！</p>
+
+        <div class="row">
+            <div class="content">
+                <h3>Python</h3>
+                <p>Pythonは僕が一番最初にやったプログラミング言語です。人気のあるおすすめの言語です！</p>
+            </div>
+            <div class="content">
+                <h3>Swift</h3>
+                <p>Swiftは僕が好きな言語です。今までにSwiftで作ったアプリを3つリリースしています！</p>
+            </div>
+            <div class="content">
+                <h3>HTML, CSS</h3>
+                <p>HTML, CSSは最近はじめました。これからどんどんできるようにしたいです！</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
 </body>
 </html>

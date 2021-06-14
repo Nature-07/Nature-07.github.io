@@ -1,79 +1,188 @@
-.head_test {
-    margin:  0;             /* デフォルトCSS打ち消し */
-    position:  relative;    /* 位置調整 */
-    font-weight:  normal;   /* 文字の太さ調整 */
-    margin-bottom: 35px;    /* 周りの余白指定 */
-    font-size: 40px;        /* 文字サイズ指定 */
-    text-align:  center;    /* 文字位置指定 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.logo-image {
+    border-radius: 50%;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(./backImage.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li ::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li :hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+
+.experience {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
 }
 
 p {
-    margin:  0;             /* デフォルトCSS打ち消し */
-    line-height: 2;         /* 行間調整 */
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content {
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3 {
     text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
 }
 
-.head_test-point {
-    display:  block;        /* ブロック要素にする */
-    font-size:  14px;       /* 文字サイズ指定 */
-    margin-top:  10px;      /* 周りの余白指定 */
-    position:  relative;    /* 位置調整 */
-    width: 140px;           /* 幅指定 */
-    margin: 10px auto 0;    /* 周りの余白指定 */
-    background-color:  #fff;/* 背景色指定 */
-}
- 
-.head_test-point:before {
-    content: '';            /* 空の要素を作る */
-    height:  1px;           /* 高さ指定 */
-    background-color:  #000;/* 背景色指定 */
-    position:  absolute;    /* 位置調整 */
-    top: 0;                 /* 位置調整 */
-    bottom:  0;             /* 位置調整 */
-    margin:  auto;          /* 位置調整 */
-    z-index: -1;            /* 重なり調整 */
-    width: 200px;           /* 幅指定 */
-    left:  -30px;           /* 位置調整 */
+.content:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-
-.box1{
-    padding: 0.5em 1em;
-    margin: 2em 0;
-    color: #5d627b;
-    background: white;
-    border-top: solid 5px #6a708b;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
-}
-
-.box1 p {
-    margin: 0; 
-    padding: 0;
-}
-
-
-.box2 {
-    margin: 2em 0;
-    background: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
-}
-
-.box2 .box-title {
-    font-size: 1.2em;
-    background: #4c9ab9;
-    padding: 4px;
-    text-align: center;
-    color: #FFF;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-
-.box2 ul {
-    padding: 15px 20px;
-    margin: 0;
-    text-align: center;
-}
-
-.box2 li {
-    display: inline-block;
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
 }
